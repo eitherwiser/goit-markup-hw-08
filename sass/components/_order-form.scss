@@ -5,6 +5,7 @@
 
   &__title {
     margin-bottom: 12px;
+    text-align: center;
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
@@ -14,7 +15,7 @@
 
 .submit {
   margin-bottom: 10px;
-  width: 100%;
+  width: auto;
 
   &__input-wrapper {
     position: relative;
@@ -72,12 +73,16 @@
   align-items: center;
   justify-content: center;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   cursor: pointer;
 
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+
   &-link {
-    margin-left: 5px;
     color: var(--accent-color);
   }
 

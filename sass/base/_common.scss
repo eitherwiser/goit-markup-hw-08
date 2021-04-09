@@ -1,4 +1,8 @@
 body {
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  min-width: 100%;
   font-family: var(--main-font);
   font-style: normal;
   font-size: 14px;
@@ -29,5 +33,6 @@ img {
 }
 
 li {
+  display: block;
   list-style: none;
 }

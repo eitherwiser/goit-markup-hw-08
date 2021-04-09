@@ -1,4 +1,8 @@
 body {
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  min-width: 100%;
   font-family: var(--main-font);
   font-style: normal;
   font-size: 14px;
@@ -28,21 +32,47 @@ img {
 }
 
 li {
+  display: block;
   list-style: none;
 }
 
 /*container*/
 .container {
   flex-wrap: wrap;
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0px auto;
 }
 
+@media screen and (max-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
 .section {
-  padding-top: var(--big-padding);
-  padding-bottom: var(--big-padding);
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: var(--big-padding);
+    padding-bottom: var(--big-padding);
+  }
 }
 
 :root {
@@ -266,14 +296,28 @@ li {
 }
 
 .modal {
+  display: flex;
   position: absolute;
-  top: 50%;
   left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
+  min-width: 100vw;
+  min-height: 609px;
   padding: 40px;
-  width: 528px;
-  height: 581px;
   background-color: var(--bg-light-color);
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    min-width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+    min-height: 581px;
+  }
 }
 
 .submit {
@@ -284,6 +328,7 @@ li {
 
 .submit__title {
   margin-bottom: 12px;
+  text-align: center;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -292,7 +337,7 @@ li {
 
 .submit {
   margin-bottom: 10px;
-  width: 100%;
+  width: auto;
 }
 
 .submit__input-wrapper {
@@ -350,13 +395,19 @@ li {
   align-items: center;
   justify-content: center;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   cursor: pointer;
 }
 
+@media screen and (min-width: 1200px) {
+  .subscription {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
 .subscription-link {
-  margin-left: 5px;
   color: var(--accent-color);
 }
 
@@ -566,7 +617,7 @@ header .logo {
 }
 
 .hero {
-  width: 1600px;
+  max-width: 1600px;
   padding: 200px 0;
   text-align: center;
   margin: auto;
@@ -807,5 +858,13 @@ header .logo {
   font-size: 16px;
   line-height: 1.9;
   color: var(--main-text-wan-color);
+}
+
+* {
+  outline: 1pt solid rgba(128, 128, 0, 0.2);
+}
+
+.container {
+  background-color: rgba(88, 88, 88, 0.08);
 }
 /*# sourceMappingURL=main.css.map */
