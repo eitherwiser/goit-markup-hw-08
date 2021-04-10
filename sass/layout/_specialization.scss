@@ -1,13 +1,19 @@
 .specification {
   padding-top: calc(-1 * var(--big-padding));
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 
 .specification-list {
-  margin-left: calc(-1 * var(--list-gap));
+  //margin-left: calc(-1 * var(--list-gap));
 
   &__item {
     position: relative;
+    max-width: 370px;
     margin-left: var(--list-gap);
+    //margin-top: var(--list-gap);
     flex-basis: calc(100% / 3);
   }
 }

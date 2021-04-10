@@ -1,0 +1,6 @@
+.gallery {
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: calc(-1 * var(--list-gap));
+  margin-left: calc(-1 * var(--list-gap));
+}

@@ -1,10 +1,27 @@
 .features-list {
-  margin-left: calc(-1 * var(--list-gap));
+  //flex-wrap: wrap;
+
+  //margin-left: calc(-1 * var(--list-gap));
 
   &__item {
-    width: 270px;
+    width: 100%;
     margin-left: var(--list-gap);
-    flex-basis: calc(100% / 4);
+    margin-top: var(--list-gap);
+
+    @media screen and (min-width: 480px) {
+      max-width: 450px;
+      flex-basis: calc(100% / 1);
+    }
+
+    @media screen and (min-width: 768px) {
+      max-width: 354px;
+      flex-basis: calc(100% / 2);
+    }
+
+    @media screen and (min-width: 1200px) {
+      max-width: 270px;
+      flex-basis: calc(100% / 4);
+    }
   }
 }
 
@@ -28,7 +45,6 @@
 }
 
 .features-text {
-  width: 270px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
