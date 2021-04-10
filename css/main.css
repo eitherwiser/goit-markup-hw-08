@@ -76,9 +76,14 @@ li {
 
 .gallery {
   flex-wrap: wrap;
-  justify-content: center;
   margin-top: calc(-1 * var(--list-gap));
   margin-left: calc(-1 * var(--list-gap));
+}
+
+@media screen and (max-width: 767px) {
+  .gallery {
+    justify-content: center;
+  }
 }
 
 :root {
@@ -459,8 +464,18 @@ li {
 .filter {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 50px;
-  justify-content: center;
+  align-content: flex-start;
+  margin-bottom: 35px;
+}
+
+@media screen and (min-width: 481px) {
+  .filter {
+    justify-content: center;
+  }
+}
+
+.filter > li {
+  margin-bottom: 15px;
 }
 
 .filter > li:not(:last-child) {
