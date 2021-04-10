@@ -1,8 +1,12 @@
 .hero {
   max-width: 1600px;
-  padding: 200px 0;
+  padding: 118px 0;
   text-align: center;
   margin: auto;
+
+  @media screen and (min-width: 1200px) {
+    padding: 200px 0;
+  }
 
   background-color: var(--bg-dark-color);
   background-image: var(--hero-gradient), url(../images/studio/hero/hero.jpg);
@@ -11,15 +15,21 @@
   background-size: cover;
 
   &__title {
-    width: 696px;
+    max-width: 360px;
     margin: auto;
     margin-bottom: 30px;
 
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.37;
+    font-size: 26px;
+    line-height: 1.6;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+
+    @media screen and (min-width: 1200px) {
+      max-width: 696px;
+      font-size: 44px;
+      line-height: 1.37;
+    }
 
     color: var(--main-light-color);
   }
