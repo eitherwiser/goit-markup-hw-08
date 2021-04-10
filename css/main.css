@@ -321,7 +321,8 @@ li {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
+  padding: 0 15px;
   background-color: var(--modal-overlay-color);
   transition: opacity var(--main-animation), visibility var(--main-animation);
 }
@@ -362,7 +363,7 @@ li {
   position: absolute;
   left: 50%;
   top: 50%;
-  padding: 40px 0 40px 0;
+  padding: 40px;
   min-width: 100%;
   min-height: 609px;
   transform: translate(-50%, -50%);
@@ -580,7 +581,21 @@ header .logo {
 }
 
 .navigation-list {
-  margin-left: 93px;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation-list {
+    display: flex;
+    margin-left: 88px;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .navigation-list {
+    margin-left: 93px;
+  }
 }
 
 .navigation-list > li:not(:last-child) {
@@ -615,20 +630,44 @@ header .logo {
 
 .header-contacts-list {
   margin-left: auto;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .header-contacts-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+  }
+  .header-contacts-list > li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-contacts-list {
+    flex-direction: row;
+  }
+  .header-contacts-list > li:not(:last-child) {
+    margin-right: 50px;
+    margin-bottom: 0px;
+  }
 }
 
 .header-contacts-list__link {
   display: flex;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
   text-decoration: none;
   color: var(--main-text-wan-color);
   transition: color var(--main-animation);
 }
 
-.header-contacts-list > li:not(:last-child) {
-  margin-right: 50px;
+@media screen and (min-width: 1200px) {
+  .header-contacts-list__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .header-contacts-list__icon {
@@ -656,7 +695,7 @@ header .logo {
   justify-content: center;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 481px) {
   .footer .container {
     align-items: baseline;
     flex-direction: row;
@@ -922,16 +961,21 @@ header .logo {
   margin-bottom: 16px;
 }
 
+.clients-list {
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 .clients-list__item {
-  width: 100%;
   margin-left: var(--list-gap);
   margin-top: var(--list-gap);
+  width: 100%;
 }
 
 @media screen and (min-width: 480px) {
   .clients-list__item {
-    max-width: 210px;
     flex-basis: calc(100% / 2);
+    max-width: 210px;
   }
 }
 

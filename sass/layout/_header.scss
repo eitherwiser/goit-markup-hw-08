@@ -24,7 +24,17 @@ header {
 }
 
 .navigation-list {
-  margin-left: 93px;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-left: 88px;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
 
   & > li:not(:last-child) {
     margin-right: 50px;
@@ -61,19 +71,39 @@ header {
 
 .header-contacts-list {
   margin-left: auto;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+
+    & > li:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+
+    & > li:not(:last-child) {
+      margin-right: 50px;
+      margin-bottom: 0px;
+    }
+  }
 
   &__link {
     display: flex;
     align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
     text-decoration: none;
     color: var(--main-text-wan-color);
     transition: color var(--main-animation);
-  }
 
-  & > li:not(:last-child) {
-    margin-right: 50px;
+    @media screen and (min-width: 1200px) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
   }
 
   &__icon {
