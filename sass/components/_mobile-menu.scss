@@ -1,103 +1,42 @@
-//.mobile-menu-container {
-//position: absolute;
-//&.is-open {
-//  display: flex;
-//}
-//@media screen and (max-width: 479px) {
-//  padding: 48px 20px;
-//}
-
-//@media screen and (max-width: 767px) {
-//  padding: 48px 40px;
-//  display: none;
-//  //position: absolute;
-//  top: 0;
-//  left: 0;
-//  width: 100%;
-//  height: 100%;
-//  z-index: 10;
-//  background-color: var(--bg-light-color);
-//}
-//}
-
-//button
-
-//// ------------------------------
-//.mobile-menu-socialmedia {
-//  display: none;
-//  //display: flex;
-//  margin: 0 auto;
-//  &__item {
-//    height: 22px;
-//    padding: 0 10px;
-//  }
-//  &__item:not(:last-child) {
-//    border-right: 1px solid rgba(33, 33, 33, 0.2);
-//  }
-//  &_link {
-//    color: var(--accent-color);
-//    font-weight: 500;
-//    font-size: 18px;
-//    line-height: 1.22;
-//    letter-spacing: 0.02em;
-//  }
-//  //@media screen and (max-width: 479px) {
-//  //  flex-wrap: wrap;
-//  //}
-//  @media screen and (min-width: 768px) {
-//    display: none;
-//  }
-//}
-
+/* mobile-menu */
 .mobile-menu {
-  @media screen and (max-width: 411px) {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  //@media screen and (min-568: 568px) {
-  //  overflow-y: scroll;
-  //}
-
-  position: fixed;
+  display: flex;
+  flex-flow: column;
+  position: absolute;
+  z-index: 2;
   opacity: 0;
-  top: 0;
-  left: 50%;
-  width: 100vw;
-  height: 100vh;
-  padding: 40px;
-  transform: translate(-50%, -50%);
-  background-color: var(--bg-light-color);
+  visibility: hidden;
+  pointer-events: all;
 
-  &.is-open {
-    opacity: 1;
-    visibility: hidden;
-    pointer-events: none;
-    z-index: 110;
+  padding: 48px 40px;
+
+  overflow-y: auto;
+
+  @media screen and (max-width: 768px) {
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg-light-color);
+    transition: opacity var(--main-animation), visibility var(--main-animation);
+
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+    @media screen and (max-width: 411px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
-
-  //  &__button {
-  //    position: absolute;
-  //    top: 10px;
-  //    right: 15px;
-  //    display: inline-flex;
-  //    color: var(--secondaryTextColor);
-  //    border: none;
-  //    padding: 0;
-  //    margin: 0;
-  //    cursor: pointer;
-  //    background-color: transparent;
-
-  //    &:hover,
-  //    &:focus {
-  //      color: var(--activeLinkColor);
-  //    }
-  //  }
 }
 
 .mobile-menu-navigation {
-  margin-bottom: 302px;
-
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  margin-bottom: 64px;
   &__item {
     margin-bottom: 32px;
     font-weight: 500;
@@ -107,27 +46,22 @@
   }
 
   &__link {
-    color: var(--main-text-wan-color);
+    text-decoration: none;
+    color: var(--main-color);
 
+    &.current,
     &:hover,
     &:focus {
-      color: var(--accent-color);
-    }
-
-    &--active {
       color: var(--accent-color);
     }
   }
 }
 
 .mobile-menu-contacts {
-  margin-bottom: 64px;
-  &__item {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 1.17;
+  flex-direction: column;
 
-    letter-spacing: 0.02em;
+  &__item {
+    display: block;
 
     & + & {
       margin-top: 32px;
@@ -135,27 +69,33 @@
   }
 
   &__link {
-    color: var(--main-text-wan-color);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    text-decoration: none;
 
-    &--decoration {
-      font-size: 34px;
-      line-height: 1.18;
-      color: var(--accent-color);
-    }
+    color: var(--main-text-wan-color);
   }
+
+  &__link--decoration {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.17;
+    color: var(--accent-color);
+  }
+}
+
+.mobile-menu-contacts {
+  margin-bottom: 64px;
 }
 
 .mobile-menu-socialmedia {
   display: flex;
+  width: 100%;
 
   &__item {
     position: relative;
-
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.22;
-
-    letter-spacing: 0.02em;
 
     &:not(:last-child) {
       margin-right: 20px;
@@ -174,6 +114,15 @@
   }
 
   &__link {
+    @media screen and (max-width: 370px) {
+      font-size: 17px;
+      line-height: 1.2;
+    }
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
     color: var(--accent-color);
   }
 }

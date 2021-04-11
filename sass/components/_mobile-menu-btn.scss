@@ -44,3 +44,15 @@
     visibility: hidden;
   }
 }
+
+/* mobile-menu-btn for header*/
+.mobile-menu-button {
+  display: flex;
+  position: absolute;
+  z-index: 3;
+  right: 25px;
+  top: 22px;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
