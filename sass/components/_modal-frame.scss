@@ -1,6 +1,7 @@
 .modal {
   display: flex;
   position: absolute;
+  z-index: 3;
   left: 50%;
   top: 50%;
   padding: 40px;

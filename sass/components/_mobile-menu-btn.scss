@@ -1,0 +1,42 @@
+.mobile-menu-button {
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+  border: none;
+  color: var(--main-color);
+  background-color: transparent;
+  transition: color var(--main-animation);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+
+  &-icon {
+    fill: currentColor;
+  }
+}
+
+.mobile-menu__icon-close {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--main-animation), visibility var(--main-animation);
+}
+
+.mobile-menu__icon-burger {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity var(--main-animation), visibility var(--main-animation);
+}
+
+.mobile-menu-button.is-open {
+  & .mobile-menu__icon-close {
+    opacity: 1;
+    visibility: visible;
+  }
+  & .mobile-menu__icon-burger {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

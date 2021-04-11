@@ -4,54 +4,109 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>portfolio</title>
+  <title>WebStudio</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.css">
   <link rel="stylesheet" href="./css/main.min.css">
   </head>
 <body>
-<!--header-->
-  <header>
-    <div class="container">
-      <!--navigation-->
-      <nav class="navigation">
-        <a class="logo" href="index.html" lang="en">Web<span class="logo-studio-black">Studio</span></a>
-        <ul class="navigation-list">
-          <li>
-            <a class="navigation-list__link" href="./index.html">Студия</a>
-          </li>
-          <li>
-            <a class="navigation-list__link current" href="./portfolio.html">Портфолио</a>
-          </li>
-          <li>
-            <a class="navigation-list__link" href="#contacts">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-      <!--header contacts-->
-      <ul class="header-contacts-list ">
+
+<!--header================================================================-->
+<header>
+  <div class="container">
+    <!--navigation-->
+    <nav class="navigation">
+      <a class="logo" href="index.html" lang="en">Web<span class="logo-studio-black">Studio</span></a>
+      <ul class="navigation-list">
         <li>
-          <a class="header-contacts-list__link" href="mailto:info@devstudio.com">
-            <svg class="header-contacts-list__icon" width="16" height="12">
-              <use href="./images/icons/icons.svg#email-contact"></use>
-            </svg>
-            info@devstudio.com
-          </a>
+          <a class="navigation-list__link" href="./index.html">Студия</a>
         </li>
         <li>
-          <a class="header-contacts-list__link" href="tel:+380961111111">
-            <svg class="header-contacts-list__icon" width="10" height="16">
-              <use href="./images/icons/icons.svg#phone-contact"></use>
-            </svg>
+          <a class="navigation-list__link current" href="./portfolio.html">Портфолио</a>
+        </li>
+        <li>
+          <a class="navigation-list__link" href="#contacts">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!--header contacts-->
+    <ul class="header-contacts-list">
+      <li class="header-contacts-lis__email">
+        <a class="header-contacts-list__link" href="mailto:info@devstudio.com">
+          <svg class="header-contacts-list__icon" width="16" height="12">
+            <use href="./images/icons/icons.svg#email-contact"></use>
+          </svg>
+          info@devstudio.com
+        </a>
+      </li>
+      <li class="header-contacts-lis__phone">
+        <a class="header-contacts-list__link" href="tel:+380961111111">
+          <svg class="header-contacts-list__icon" width="10" height="16">
+            <use href="./images/icons/icons.svg#phone-contact"></use>
+          </svg>
+          +38 096 111 11 11
+        </a>
+      </li>
+    </ul>
+
+
+    <!--mobile-menu-->
+
+    <!--mobile-menu-btn-->
+    <button type="button" class="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false" data-menu-button>
+      <svg class="mobile-menu-button-icon" width="40" height="40" aria-label="Переключатель мобильного меню">
+        <use class="mobile-menu__icon-burger" href="./images/icons/icons.svg#burger-btn"></use>
+        <use class="mobile-menu__icon-close" href="./images/icons/icons.svg#close-btn"></use>
+      </svg>
+    </button>
+
+    <!--mobile-menu-content-->
+    <div class="mobile-menu" id="mobile-menu" data-menu>
+      <ul class="mobile-menu-navigation">
+        <li class="mobile-menu-navigation__item">
+          <a href="./index.html" class="link mobile-menu-navigation__link">Студия</a>
+        </li>
+        <li class="mobile-menu-navigation__item">
+          <a href="./portfolio.html" class="link mobile-menu-navigation__link current">Портфолио</a>
+        </li>
+        <li class="mobile-menu-navigation__item">
+          <a href="" class="link mobile-menu-navigation__link">Контакты</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-menu-contacts">
+        <li class="mobile-menu-contacts__item">
+          <a class="link mobile-menu-contacts__link mobile-menu-contacts__link--decoration" href="tel:+380961111111">
             +38 096 111 11 11
           </a>
         </li>
+        <li class="mobile-menu-contacts__item">
+          <a class="link mobile-menu-contacts__link" href="mailto:info@example.com">
+            info@example.com</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-menu-socialmedia">
+        <li class="mobile-menu-socialmedia__item"><a class="mobile-menu-socialmedia__link"
+            href="https://www.instagram.com/">Instagram</a></li>
+        <li class="mobile-menu-socialmedia__item"><a class="mobile-menu-socialmedia__link"
+            href="https://twitter.com/">Twitter</a></li>
+        <li class="mobile-menu-socialmedia__item"><a class="mobile-menu-socialmedia__link"
+            href="https://www.facebook.com/">Facebook</a></li>
+        <li class="mobile-menu-socialmedia__item"><a class="mobile-menu-socialmedia__link"
+            href="https://www.linkedin.com/">Linkedin</a></li>
       </ul>
     </div>
-  </header>
+
+  </div>
+</header>
+
 
   <main>
+
+    <!--gallery ================================================================-->
 <section class="section">
   <div class="example container">
     <h1 class="hidden-element">Наши работы</h1>
@@ -193,9 +248,10 @@
     </ul>
   </div>
 </section>
+
   </main>
 
-<!--footer-->
+<!--footer================================================================-->
 <footer class="footer">
   <div class="container">
     <div class="contacts-info">
@@ -213,6 +269,7 @@
         </li>
       </ul>
     </div>
+
     <div class="contacts-socialmedia">
       <p class="footer-title">Присоединяйтесь</p>
       <ul class="socialmedia-list ">
@@ -246,6 +303,7 @@
         </li>
       </ul>
     </div>
+
     <div class="followUs">
       <form action="#" class="followUs-form">
         <p class="footer-title">Подпишитесь на рассылку</p>
@@ -260,5 +318,8 @@
     </div>
   </div>
 </footer>
+
+    <script src="./js/mobile-menu.js"></script>
+
 </body>
 </html>
