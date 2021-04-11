@@ -7,13 +7,10 @@
 }
 
 .specification-list {
-  //margin-left: calc(-1 * var(--list-gap));
-
   &__item {
     position: relative;
     max-width: 370px;
     margin-left: var(--list-gap);
-    //margin-top: var(--list-gap);
     flex-basis: calc(100% / 3);
   }
 }
