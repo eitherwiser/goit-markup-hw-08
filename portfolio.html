@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WebStudio</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.css">
@@ -123,7 +122,20 @@
       <li class="example-list__item">
         <a class="example__link" href="#">
           <div class="example__overlay-box">
-            <img src="./images/portfolio/tech-crack.jpg" alt="Веб-сайт Технокряк">
+                            <picture>
+                              <source srcset="./images/desktop/portfolio/1x/img.webp 1x, ./images/desktop/portfolio/2x/img@2x.webp 2x"
+                                media="(min-width: 1200px)" type="image/webp">
+                              <source srcset="./images/desktop/portfolio/1x/img.jpg 1x, ./images/desktop/portfolio/2x/img@2x.jpg 2x"
+                                media="(min-width: 1200px)">
+                              <source srcset="./images/tablet/portfolio/1x/img.webp 1x, ./images/tablet/portfolio/2x/img@2x.webp 2x"
+                                media="(min-width: 768px)" type="image/webp">
+                              <source srcset="./images/tablet/portfolio/1x/img.jpg 1x, ./images/tablet/portfolio/2x/img@2x.jpg 2x"
+                                media="(min-width: 768px)">
+                              <source srcset="./images/smartphone/portfolio/1x/img.webp 1x, ./images/smartphone/portfolio/2x/img@2x.webp 2x" media="(min-width: 480px)"
+                                type="image/webp">
+                              <source srcset="./images/smartphone/portfolio/1x/img.jpg 1x, ./images/smartphone/portfolio/2x/img@2x.jpg 2x" media="(min-width: 480px)">
+                              <img class="exampe__img" src="./images/smartphone/portfolio/2x/img@2x.jpg" alt="Веб-сайт Технокряк">
+                            </picture>
             <p class="example__overlay-text">
             Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.
             </p>
