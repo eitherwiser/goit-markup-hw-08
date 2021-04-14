@@ -6,6 +6,12 @@ body {
   font-size: 14px;
   line-height: 1.5;
   letter-spacing: 0.03em;
+  overflow: auto;
+
+  &.is-open,
+  &.is-blocked {
+    overflow-y: hidden;
+  }
 
   background-color: var(--bg-light-color);
   color: var(--main-color);

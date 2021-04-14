@@ -9,9 +9,9 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.css">
   <link rel="stylesheet" href="./css/main.min.css">
-  <link rel="icon" href="./images/icons/favicon.ico" />
+  <link rel="icon" href="./images/icons/favicon.ico">
 </head>
-<body>
+<body data-body>
   
 <!--header================================================================-->
   <header>
@@ -35,16 +35,16 @@
 
       <!--header contacts-->
       <ul class="header-contacts-list">
-        <li class="header-contacts-lis__email">
-          <a class="header-contacts-list__link" href="mailto:info@devstudio.com">
+        <li>
+          <a class="header-contacts-list__link header-contacts-list__email" href="mailto:info@devstudio.com">
             <svg class="header-contacts-list__icon" width="16" height="12">
               <use href="./images/icons/icons.svg#email-contact"></use>
             </svg>
             info@devstudio.com
           </a>
         </li>
-        <li class="header-contacts-lis__phone">
-          <a class="header-contacts-list__link" href="tel:+380961111111">
+        <li>
+          <a class="header-contacts-list__link header-contacts-list__phone" href="tel:+380961111111">
             <svg class="header-contacts-list__icon" width="10" height="16">
               <use href="./images/icons/icons.svg#phone-contact"></use>
             </svg>
@@ -52,6 +52,7 @@
           </a>
         </li>
       </ul>
+      
 
       <!--mobile-menu-btn-->
       <button type="button" class="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false" data-menu-button>
@@ -59,48 +60,7 @@
           <use class="mobile-menu__icon-burger" href="./images/icons/icons.svg#burger-btn"></use>
           <use class="mobile-menu__icon-close" href="./images/icons/icons.svg#close-btn"></use>
         </svg>
-      </button>
-      
-      <!--mobile-menu-->
-      
-      <!--mobile-menu-content-->
-      <div class="mobile-menu" id="mobile-menu" data-menu>
-        <ul class="mobile-menu-navigation">
-          <li class="mobile-menu-navigation__item">
-            <a href="./index.html" class="link mobile-menu-navigation__link current">Студия</a>
-          </li>
-          <li class="mobile-menu-navigation__item">
-            <a href="./portfolio.html" class="link mobile-menu-navigation__link">Портфолио</a>
-          </li>
-          <li class="mobile-menu-navigation__item">
-            <a href="" class="link mobile-menu-navigation__link">Контакты</a>
-          </li>
-        </ul>
-      
-        <ul class="mobile-menu-contacts">
-          <li class="mobile-menu-contacts__item">
-            <a class="link mobile-menu-contacts__link mobile-menu-contacts__link--decoration" href="tel:+380961111111">
-              +38 096 111 11 11
-            </a>
-          </li>
-          <li class="mobile-menu-contacts__item">
-            <a class="link mobile-menu-contacts__link" href="mailto:info@example.com">
-              info@example.com</a>
-          </li>
-        </ul>
-      
-        <ul class="mobile-menu-socialmedia">
-          <li class="mobile-menu-socialmedia__item"><a class="mobile-menu-socialmedia__link"
-              href="https://www.instagram.com/">Instagram</a></li>
-          <li class="mobile-menu-socialmedia__item"><a class="mobile-menu-socialmedia__link"
-              href="https://twitter.com/">Twitter</a></li>
-          <li class="mobile-menu-socialmedia__item"><a class="mobile-menu-socialmedia__link"
-              href="https://www.facebook.com/">Facebook</a></li>
-          <li class="mobile-menu-socialmedia__item"><a class="mobile-menu-socialmedia__link"
-              href="https://www.linkedin.com/">Linkedin</a></li>
-        </ul>
-      </div>
-
+      </button>      
     </div>
   </header>
 
@@ -583,20 +543,66 @@
             <textarea class="submit__textarea submit--decoration" name="comment" id="comment" placeholder="Введите текст"></textarea>
           </div>
 
-          <label class="subscription" for="agreement">
+          <div class="subscription">
+          <label class="subscription__label" for="agreement">
             <input class="subscription-input hidden-element" type="checkbox" name="agreement" id="agreement" value="approved" />
-            <svg class="subscription-icon" width="16" height="15">
+            <svg class="subscription__icon" width="16" height="15">
               <use href="./images/icons/icons.svg#check"></use>
             </svg>
             <span>Соглашаюсь с рассылкой и принимаю&nbsp;</span>
-            <a class="subscription-link" href="">Условия договора</a>
           </label>
+                      <a class="subscription__link" href="">Условия договора</a>
+          </div>
 
           <button class="modal-submit-btn action-button" name="modal-submit-btn" type="submit">Отправить</button>
 
         </form>
-
+      </div>
     </div>
+
+    <!--mobile-menu-->
+    
+      <!--mobile-menu-content-->
+      <div class="mobile-menu" id="mobile-menu" data-menu>
+
+        <div class="mobile-menu__frame">
+        <ul class="mobile-menu-navigation">
+          <li class="mobile-menu-navigation__item">
+            <a href="./index.html" class="link mobile-menu-navigation__link current">Студия</a>
+          </li>
+          <li class="mobile-menu-navigation__item">
+            <a href="./portfolio.html" class="link mobile-menu-navigation__link">Портфолио</a>
+          </li>
+          <li class="mobile-menu-navigation__item">
+            <a href="" class="link mobile-menu-navigation__link">Контакты</a>
+          </li>
+        </ul>
+      
+        <ul class="mobile-menu-contacts">
+          <li class="mobile-menu-contacts__item">
+            <a class="link mobile-menu-contacts__link mobile-menu-contacts__link--decoration" href="tel:+380961111111">
+              +38 096 111 11 11
+            </a>
+          </li>
+          <li class="mobile-menu-contacts__item">
+            <a class="link mobile-menu-contacts__link" href="mailto:info@example.com">
+              info@example.com</a>
+          </li>
+        </ul>
+      
+        <ul class="mobile-menu-socialmedia">
+          <li class="mobile-menu-socialmedia__item"><a class="mobile-menu-socialmedia__link"
+              href="https://www.instagram.com/">Instagram</a></li>
+          <li class="mobile-menu-socialmedia__item"><a class="mobile-menu-socialmedia__link"
+              href="https://twitter.com/">Twitter</a></li>
+          <li class="mobile-menu-socialmedia__item"><a class="mobile-menu-socialmedia__link"
+              href="https://www.facebook.com/">Facebook</a></li>
+          <li class="mobile-menu-socialmedia__item"><a class="mobile-menu-socialmedia__link"
+              href="https://www.linkedin.com/">Linkedin</a></li>
+        </ul>
+        </div>
+      </div>
+
 
 
     <script src="./js/mobile-menu.js"></script>
