@@ -8,6 +8,8 @@ body {
   letter-spacing: 0.03em;
   overflow: auto;
 
+  @media screen and (max-width: 767px) {
+  }
   &.is-open,
   &.is-blocked {
     overflow-y: hidden;
