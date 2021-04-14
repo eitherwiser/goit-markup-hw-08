@@ -2,6 +2,8 @@
 .mobile-menu {
   display: flex;
   position: absolute;
+  left: 0px;
+  top: 0px;
   justify-content: center;
   width: 100%;
   min-width: 240px;
@@ -14,8 +16,6 @@
   overflow: auto;
 
   @media screen and (max-width: 768px) {
-    left: 0px;
-    top: 0px;
     background-color: var(--bg-light-color);
     transition: opacity var(--main-animation), visibility var(--main-animation);
 
